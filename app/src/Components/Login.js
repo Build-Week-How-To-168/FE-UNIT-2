@@ -18,11 +18,11 @@ const Styles = styled.div `
         box-shadow: 2px 3px 10px 5px #888888;
     }
     .container-two {
-        padding: 2em;
+        padding: 1.25em;
     }
     h3 {
         font-size: 25px;
-        color: black;
+        color: #002925;
     } 
     input{
         padding: 1.5em;
@@ -32,14 +32,29 @@ const Styles = styled.div `
         border-radius: 8px;
     }
     button {
-        margin-bottom: 2em;
-        margin-left: 6vw;
-        margin-right: 6vw;
-        padding: 1em;
+        margin-bottom: 1em;
+        margin-left: 6.5vw;
+        margin-right: 6.5vw;
+        padding: .5em;
         background-color: #00f5d4;
         border: 1px solid #00f5d4;
+        font-size: 16px;
         border-radius: 20px;
         color: white;
+        font-weight: bold;
+        opacity: 5;
+        transition: 0.7s;
+    }
+    button:hover {
+      background-color: #f4d301;
+      border: 1px solid #f4d301;
+      color: white;
+      font-weight: bolder;
+      opacity: 3
+    }
+    .link {
+      color: #005c7a;
+      font-size: 15px;
     }
 `
 
@@ -50,7 +65,7 @@ function Login() {
     <Styles>
       <form>
           <div className="container">
-          <h3>Log into your account</h3>
+          <h3>LOG INTO YOUR ACCOUNT</h3>
             <div className="container-two">
                 <label htmlFor="username"></label>
                 <input 
@@ -69,7 +84,7 @@ function Login() {
                 />
            </div> 
            <button>Log-In</button>
-            <Link to='/signup'>Don't have an account? Sign up!</Link>
+            <Link className="link" to='/signup'>Don't have an account? Sign up!</Link>
            </div>  
            <Route path='/signup'component={Signup}/>
       </form>
