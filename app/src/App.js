@@ -27,10 +27,7 @@ const Styled = styled.div `
       margin: 1.5em;
     }
 
-    h1 {
-      color: #00e0c2;
-    }
-
+   
     .nav-links {
       margin-top: 1em;
       padding: .5em;
@@ -55,6 +52,15 @@ const Styled = styled.div `
       padding-top: .25em;
       padding-bottom: .25em;
       border-radius: 20px;
+      opacity: 5;
+      transition: 0.7s;
+    }
+    .activeLink:hover {
+      background-color: #f4d301;
+        border: 1px solid #f4d301;
+        color: white;
+        font-weight: bolder;
+        {opacity: 3}
     }
 `
 
